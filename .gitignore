@@ -6,3 +6,6 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
+
+logs/
+build/

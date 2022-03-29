@@ -2,18 +2,25 @@ package furhatos.app.persuationfurhat.flow
 
 import furhatos.nlu.common.*
 import furhatos.flow.kotlin.*
+import furhatos.gestures.Gesture
+import furhatos.gestures.Gestures
 
 val Start : State = state(Interaction) {
 
     onEntry {
-        furhat.ask("Hi there. Bye?")
+        furhat.say("Hello there!")
+        furhat.listen(timeout = 2000)
     }
 
-    onResponse<Yes>{
-        furhat.say("I like humans.")
+    onNoResponse {
+        furhat.gesture(Gestures.Smile)
+        furhat.say("Nice to talk to you today!")
+        goto(GetInitialStandpoint)
     }
 
-    onResponse<No>{
-        furhat.say("That's sad.")
+    onResponse<Greeting> {
+        furhat.gesture(Gestures.BigSmile)
+        furhat.say("So nice to talk to you today!")
+        goto(GetInitialStandpoint)
     }
 }
