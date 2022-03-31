@@ -4,7 +4,7 @@ import furhatos.app.persuationfurhat.nlu.*
 import furhatos.nlu.common.*
 import furhatos.flow.kotlin.*
 import furhatos.nlu.Intent
-var x = 0
+//var x = 0
 
 val GetInitialStandpoint: State = state(Interaction) {
 
@@ -13,49 +13,54 @@ val GetInitialStandpoint: State = state(Interaction) {
     }
 
     onResponse<StandpointNeutral> {
-        furhat.say("So, you don't mind?")
+        furhat.ask("So, you don't mind?")
         onResponse<Yes>{
             goto(statechecker)
         }
         onResponse<No>{
             x -= 1
+            goto(statechecker)
         }
     }
 
     onResponse<StandpointVegetarian> {
-        furhat.say("So, you rather don't eat meat?")
-        onResponse<Yes> {
+        val resp = furhat.askYN("So, you rather don't eat meat?")
+        if (resp == true){
             x -= 1
         }
+        goto(statechecker)
     }
 
     onResponse<StandpointVegan> {
-        furhat.say("So, you are against eating meat?")
+        furhat.ask("So, you are against eating meat?")
         onResponse<Yes> {
             x -= 2
+            goto(statechecker)
         }
         onResponse<No>{
             x -= 1
+            goto(statechecker)
         }
     }
 
     onResponse<StandpointEatMeat> {
-        furhat.say("So, you eat meat?")
-        onResponse<Yes> {
+        val resp = furhat.askYN("So, you eat meat?")
+        if (resp == true){
             x += 1
         }
-        onResponse<No>{
+        goto(statechecker)
 
-        }
     }
 
     onResponse<StandpointLoveMeat> {
-        furhat.say("So, you love meat?")
+        furhat.ask("So, you love meat?")
         onResponse<Yes> {
             x += 2
+            goto(statechecker)
         }
         onResponse<No>{
             x += 1
+            goto(statechecker)
         }
     }
 }

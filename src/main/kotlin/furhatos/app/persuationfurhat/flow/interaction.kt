@@ -15,13 +15,13 @@ val Start : State = state(Interaction) {
     onNoResponse {
         furhat.gesture(Gestures.Smile)
         furhat.say("Nice to talk to you today!")
-        goto(GetInitialStandpoint)
+        goto(InitialStandpointV2)
     }
 
     onResponse<Greeting> {
         furhat.gesture(Gestures.BigSmile)
         furhat.say("So nice to talk to you today!")
-        goto(GetInitialStandpoint)
+        goto(InitialStandpointV2)
     }
 
 }
