@@ -23,4 +23,5 @@ val Start : State = state(Interaction) {
         furhat.say("So nice to talk to you today!")
         goto(GetInitialStandpoint)
     }
+
 }
