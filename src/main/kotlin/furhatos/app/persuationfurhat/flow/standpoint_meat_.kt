@@ -5,12 +5,14 @@ import furhatos.flow.kotlin.*
 import furhatos.gestures.Gesture
 import furhatos.gestures.Gestures
 import kotlin.random.Random
+val standpoint_meat1_options = mutableListOf("test1", "test2")
 
 val standpoint_meat1: State = state(Interaction) {
-    val standpoints = mutableListOf("test1", "test2")
+
     onEntry {
         val random = Random.nextInt(0, standpoints.size)
-        furhat.say(standpoints[random])
+        furhat.say(standpoint_meat1_options[random])
+        standpoint_meat1_options.removeAt(random)
     }
 
 }
