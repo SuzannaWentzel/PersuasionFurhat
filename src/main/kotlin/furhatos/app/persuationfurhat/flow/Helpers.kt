@@ -10,7 +10,9 @@ import furhatos.flow.kotlin.furhat
 import kotlin.random.Random
 
 fun getRandomConfirmationQuestion(): String {
-    return confirmationRequestOptions[Random.nextInt(0, confirmationRequestOptions.size)]
+    val randomIndex = Random.nextInt(0, confirmationRequestOptions.size)
+    print(randomIndex)
+    return confirmationRequestOptions[randomIndex]
 }
 
 fun getRandomShowUnderstanding(): String {
