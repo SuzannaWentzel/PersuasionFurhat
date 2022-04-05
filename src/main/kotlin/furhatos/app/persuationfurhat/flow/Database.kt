@@ -2,22 +2,26 @@
 val standpoint_meat1_options = mutableListOf(
     "People should only eat sustainable meat, so that animals still have a good life.",
     "People should preferably eat eco-friendly meat.",
-    "People should only eat sustainable and eco-friendly meat."
+    "People should only eat sustainable and eco-friendly meat.",
+    "Eating meat is a tradition, especially in holidays. I love the turkey with thanksgiving, and rabbit for Christmas, and I would not want to disappoint the family."
 )
 val standpoint_meat2_options = mutableListOf(
     "If I could eat, I would definitely eat meat, but other people can do what they want.",
-    "I would encourage people to eat meat, but people can do what they want."
+    "I would encourage people to eat meat, but people can do what they want.",
+    "The portion of meat I eat is so small compared to how much meat is eaten in the entire world, it does not matter much if I stop eating meat."
 )
 val standpoint_meat3_options = mutableListOf(
     "I don’t understand that people would not eat meat. Meat is great.",
     "Not eating meat is ridiculous.",
     "Meat is not the problem, sugar is!",
     "Everybody should eat meat.",
-    "Meat farms should get subsidies to make sure meat is always available."
+    "Meat farms should get subsidies to make sure meat is always available.",
+    "Being able to eat meat is a human right."
 )
 val standpoint_meat4_options = mutableListOf(
     "Everybody should be forced to eat meat everyday",
-    "Chefs should not be able to get their license if they don’t know how to prepare meat."
+    "Chefs should not be able to get their license if they don’t know how to prepare meat.",
+    "Humans are entitled to eat meat, as they have dominion over all animals. We are at the top of the food chain."
 )
 val standpoint_neutral_options = mutableListOf(
     "I don’t care whether people eat meat.",
