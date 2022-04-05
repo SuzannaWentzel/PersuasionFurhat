@@ -5,7 +5,6 @@ import furhatos.flow.kotlin.*
 import furhatos.gestures.Gesture
 import furhatos.gestures.Gestures
 import kotlin.random.Random
-val standpoint_meat1_options = mutableListOf("test1", "test2")
 
 val standpoint_meat1: State = state(Interaction) {
 
