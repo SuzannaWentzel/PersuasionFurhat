@@ -15,6 +15,7 @@ import furhatos.util.Language
 class standpoint : EnumEntity()
 
 var x = 0
+
 val InitialStandpointV2: State = state(Interaction) {
 
     onEntry {
