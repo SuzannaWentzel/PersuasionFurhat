@@ -21,6 +21,8 @@ val askConfirmation: State = state(Interaction) {
             x += 1
         } else if (x < 4) {
             x -= 1
+        } else if (x == 4) {
+//            randomly go up or down
         }
 
         furhat.say(getRandomConfirmation())
@@ -35,6 +37,8 @@ val askConfirmation: State = state(Interaction) {
             x -=  1
         } else if (x < 4) {
             x += 1
+        } else if (x == 4) {
+//            randomly go up or down
         }
 
         furhat.say(getRandomShowUnderstanding())
