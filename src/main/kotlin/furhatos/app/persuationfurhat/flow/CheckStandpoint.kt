@@ -4,9 +4,13 @@ import furhatos.flow.kotlin.State
 import furhatos.flow.kotlin.furhat
 import furhatos.flow.kotlin.onResponse
 import furhatos.flow.kotlin.state
+import furhatos.nlu.Intent
 import furhatos.nlu.common.No
 import furhatos.nlu.common.Yes
+import kotlin.random.Random
 
+class PositiveAnswer : Intent()
+class NegativeAnswer : Intent()
 var confirmed = false
 
 val askConfirmation: State = state(Interaction) {
@@ -15,14 +19,15 @@ val askConfirmation: State = state(Interaction) {
     }
 
 //    User agreed with the more extreme standpoint, so try to make it even more extreme
-    onResponse<Yes> {
+    onResponse<PositiveAnswer> {
         confirmed = true
         if (x > 4) {
             x += 1
         } else if (x < 4) {
             x -= 1
         } else if (x == 4) {
-//            randomly go up or down
+            val random = Random.nextInt(-2, 2)
+            x += random
         }
 
         furhat.say(getRandomConfirmation())
@@ -31,25 +36,27 @@ val askConfirmation: State = state(Interaction) {
     }
 
 //    User did not agree with the more extreme standpoint, so make it less extreme
-    onResponse<No> {
+    onResponse<NegativeAnswer> {
         confirmed = false
         if (x > 4) {
             x -=  1
         } else if (x < 4) {
             x += 1
         } else if (x == 4) {
-//            randomly go up or down
+            val random = Random.nextInt(-2, 2)
+            x += random
         }
 
         furhat.say(getRandomShowUnderstanding())
         furhat.say(getFactIntroduction())
 
+
         if (x == 4) {
 //            Neutral
         } else if (x > 4) {
-//            Meat
+            furhat.say(getFactMeat())
         } else {
-//            No meat
+            furhat.say(getFactAgainstMeat())
         }
 
         goto(statechecker)

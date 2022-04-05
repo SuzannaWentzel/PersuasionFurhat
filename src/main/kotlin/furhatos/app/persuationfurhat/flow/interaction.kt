@@ -1,5 +1,6 @@
 package furhatos.app.persuationfurhat.flow
 
+import furhatos.app.persuationfurhat.nlu.Greetings
 import furhatos.nlu.common.*
 import furhatos.flow.kotlin.*
 import furhatos.gestures.Gesture
@@ -18,7 +19,7 @@ val Start : State = state(Interaction) {
         goto(InitialStandpointV2)
     }
 
-    onResponse<Greeting> {
+    onResponse<Greetings> {
         furhat.gesture(Gestures.BigSmile)
         furhat.say("So nice to talk to you today!")
         goto(InitialStandpointV2)

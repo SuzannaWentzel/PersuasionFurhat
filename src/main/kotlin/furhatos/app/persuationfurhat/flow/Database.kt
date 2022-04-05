@@ -5,28 +5,30 @@ val standpoint_against_meat4_options = mutableListOf(
 val standpoint_against_meat3_options = mutableListOf(
     "I think eating meat is unethical.",
     "There should be higher taxes on meat.",
-    "It should be mandatory for people to eat vegetarian food a few days a week."
+    "It should be mandatory for people to eat vegetarian a few days a week."
 )
 val standpoint_against_meat2_options = mutableListOf(
-    "Meat should not be discounted",
-    "Personally, I'm vegetarian, and I think that more people should be"
+    "Meat should not be allowed to be discounted",
+    "Personally, I'm vegetarian, and I think that more people should be",
+    "I think it is sad that all those nice animals are getting killed"
 )
 val standpoint_against_meat1_options = mutableListOf(
     "People should eat less meat",
-    "Even though it is everybody's own choice, I think not eating meat would be better"
+    "Even though it is everybody's own choice, I think not eating meat would be better",
+    "Eating meat is bad for the environment"
 )
 
 val standpoint_meat1_options = mutableListOf(
-    "Eating meat is a tradition, especially in holidays. Like turkey with thanksgiving, and rabbit for Christmas. "
+    "Eating meat is a tradition, especially in holidays. Like turkey with thanksgiving, and rabbit for Christmas. ",
+    "Personally, i like to eat meat, but other people can do what they want."
 )
 val standpoint_meat2_options = mutableListOf(
-    "If I could eat, I would definitely eat meat, but other people can do what they want.",
+    "If I could eat, I would definitely eat meat, it tastes great",
     "The portion of meat I eat is so small compared to how much meat is eaten in the entire world, it does not matter much if I stop eating meat."
 )
 val standpoint_meat3_options = mutableListOf(
     "I don’t understand that people would not eat meat. Meat is great.",
     "Not eating meat is ridiculous.",
-    "Meat is not the problem, sugar is!",
     "Everybody should eat meat.",
     "Meat farms should get subsidies to make sure meat is always available.",
     "Being able to eat meat is a human right."
@@ -66,7 +68,7 @@ val arguments_neutral_options= mutableListOf(
     "Why should anyone decide what someone should eat?"
 )
 
-val confirmationOptions = mutableListOf("Okay", "Alright")
-val confirmationRequestOptions = mutableListOf("Do you agree?", "Don’t you agree?", "Don’t you think so?")
-val showUnderstanding = mutableListOf("Ah, alright", "Oh, okay", "Ow")
-val factIntroduction = mutableListOf("Did you know that", "Actually,")
+val confirmationOptions = mutableListOf("Okay", "Alright", "Cool", "Great")
+val confirmationRequestOptions = mutableListOf("Do you agree?", "Don’t you agree?", "Don’t you think so?","wouldn't you say so?", "Right?")
+val showUnderstanding = mutableListOf("Ah, alright", "Oh, okay", "Ow", "Ah", "")
+val factIntroduction = mutableListOf("Did you know that", "Actually,","Let me tell you something,")
