@@ -13,18 +13,14 @@ val standpoint_against_meat2_options = mutableListOf(
 )
 val standpoint_against_meat1_options = mutableListOf(
     "People should eat less meat",
-    "Even though it is everybody's own choice, I think not eating meat would be beter"
+    "Even though it is everybody's own choice, I think not eating meat would be better"
 )
 
 val standpoint_meat1_options = mutableListOf(
-    "People should only eat sustainable meat, so that animals still have a good life.",
-    "People should preferably eat eco-friendly meat.",
-    "People should only eat sustainable and eco-friendly meat.",
     "Eating meat is a tradition, especially in holidays. Like turkey with thanksgiving, and rabbit for Christmas. "
 )
 val standpoint_meat2_options = mutableListOf(
     "If I could eat, I would definitely eat meat, but other people can do what they want.",
-    "I would encourage people to eat meat, but people can do what they want.",
     "The portion of meat I eat is so small compared to how much meat is eaten in the entire world, it does not matter much if I stop eating meat."
 )
 val standpoint_meat3_options = mutableListOf(
