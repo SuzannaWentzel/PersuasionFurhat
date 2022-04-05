@@ -48,3 +48,7 @@ val arguments_against_meat_options = mutableListOf(
     "The extensive grazing of livestock occupies and degrades vast areas of land. In fact, the livestock sector occupies 26% of the ice-free surface of the earth.",
     "Expansion of livestock production is a key factor in deforestation."
 )
+val arguments_neutral_options= mutableListOf(
+    "Everybody should be able to eat the things that make them happy",
+    "Why should anyone decide what someone should eat?"
+)
