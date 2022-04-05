@@ -12,40 +12,45 @@ import kotlin.random.Random
 
 
 // Most neutral standpoint against meat
-val standpoint_against_meat1: State = state(Interaction) {
+val standpoint_against_meat4: State = state(Interaction) {
 
     onEntry {
         val randomOptionIndex = Random.nextInt(0, standpoint_against_meat4_options.size)
-        val newStandpoint = standpoint_against_meat4_options[randomOptionIndex]
-        furhat.say(newStandpoint)
+        standpoint_against_meat4_options.removeAt(randomOptionIndex)
+        furhat.say(standpoint_against_meat4_options[randomOptionIndex])
         goto(askConfirmation)
     }
-}
-
-val standpoint_against_meat2: State = state(Interaction) {
-
-    onEntry {
-        val randomOptionIndex = Random.nextInt(0, standpoint_against_meat4_options.size)
-        val newStandpoint = standpoint_against_meat4_options[randomOptionIndex]
-        furhat.say(newStandpoint)
-        goto(askConfirmation)
-    }
-
 }
 
 val standpoint_against_meat3: State = state(Interaction) {
 
     onEntry {
-        furhat.say("this is the veggie eater standpoint number three")
+        val randomOptionIndex = Random.nextInt(0, standpoint_against_meat3_options.size)
+        standpoint_against_meat3_options.removeAt(randomOptionIndex)
+        furhat.say(standpoint_against_meat3_options[randomOptionIndex])
+        goto(askConfirmation)
+    }
+
+}
+
+val standpoint_against_meat2: State = state(Interaction) {
+
+    onEntry {
+        val randomOptionIndex = Random.nextInt(0, standpoint_against_meat2_options.size)
+        standpoint_against_meat2_options.removeAt(randomOptionIndex)
+        furhat.say(standpoint_against_meat2_options[randomOptionIndex])
+        goto(askConfirmation)
     }
 
 }
 
 // Most extreme standpoint against meat
-val standpoint_against_meat4: State = state(Interaction) {
+val standpoint_against_meat1: State = state(Interaction) {
 
     onEntry {
-        furhat.say("this is the veggie eater standpoint number four")
-    }
+        val randomOptionIndex = Random.nextInt(0, standpoint_against_meat1_options.size)
+        standpoint_against_meat1_options.removeAt(randomOptionIndex)
+        furhat.say(standpoint_against_meat1_options[randomOptionIndex])
+        goto(askConfirmation)    }
 
 }
