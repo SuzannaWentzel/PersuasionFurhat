@@ -9,10 +9,8 @@ import furhatos.nlu.common.Yes
 
 val ending: State = state(Interaction) {
     onEntry {
-        furhat.say(getRandomShowUnderstanding())
         furhat.say("We had a great talk, thanks!")
         furhat.ask("Did I change your opinion about eating meat in any way?")
-
     }
 
     onResponse<Opinion>{
@@ -53,6 +51,5 @@ val ending3: State = state(Interaction) {
     onResponse<Opinion>{
         print(it.text)
         dialogLogger.endSession()
-
     }
 }

@@ -34,6 +34,10 @@ val askConfirmation: State = state(Interaction) {
 
         furhat.say(getRandomConfirmation())
 
+        if (optionsIsEmpty()) {
+            goto(ending)
+        }
+
         goto(statechecker)
     }
 
@@ -50,6 +54,11 @@ val askConfirmation: State = state(Interaction) {
         }
 
         furhat.say(getRandomShowUnderstanding())
+
+        if (optionsIsEmpty()) {
+            goto(ending)
+        }
+
         furhat.gesture(Gestures.Smile)
         furhat.say(getFactIntroduction())
 

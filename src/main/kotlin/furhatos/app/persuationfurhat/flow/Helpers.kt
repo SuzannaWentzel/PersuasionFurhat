@@ -66,3 +66,8 @@ fun optionsIsEmpty(): Boolean {
             standpoint_against_meat3_options.isEmpty() or
             standpoint_against_meat4_options.isEmpty()
 }
+
+fun getRandomCopulative(): String {
+    val random = Random.nextInt(0, copulative.size)
+    return copulative[random]
+}
