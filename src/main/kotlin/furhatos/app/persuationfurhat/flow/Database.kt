@@ -43,7 +43,7 @@ val standpoint_neutral_options = mutableListOf(
     "People should choose for themselves whether they want to eat meat or not."
 )
 val arguments_meat_options= mutableListOf(
-    "Humans have always eaten meat, why stop now?" ,
+    "Humans have always eaten meat, we shouldn't stop now" ,
     "Many meat substitutes are actually very unhealthy, as they contain large amounts of sugar and sodium." ,
     "Animals can’t possibly have sentience, so they don’t suffer." ,
     "Meat is very nutritious and part of a healthy diet." ,
@@ -70,5 +70,5 @@ val arguments_neutral_options= mutableListOf(
 
 val confirmationOptions = mutableListOf("Okay", "Alright", "Cool", "Great")
 val confirmationRequestOptions = mutableListOf("Do you agree?", "Don’t you agree?", "Don’t you think so?","wouldn't you say so?", "Right?")
-val showUnderstanding = mutableListOf("Ah, alright", "Oh, okay", "Ow", "Ah", "")
+val showUnderstanding = mutableListOf("Ah, alright", "Oh, okay", "Ow", "Ah", "Really?")
 val factIntroduction = mutableListOf("Did you know that", "Actually,","Let me tell you something,")

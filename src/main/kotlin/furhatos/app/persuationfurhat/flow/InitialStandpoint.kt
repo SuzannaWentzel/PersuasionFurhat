@@ -22,7 +22,6 @@ val InitialStandpointV2: State = state(Interaction) {
         furhat.ask("I was wondering, what do you think about eating meat?")
     }
     onResponse<standpoint> {
-
         x = it.intent.value?.toInt() ?:-1
         print(x)
         goto(statechecker)

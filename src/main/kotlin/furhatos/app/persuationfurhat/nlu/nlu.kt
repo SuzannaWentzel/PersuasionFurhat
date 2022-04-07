@@ -20,3 +20,6 @@ class StandpointNeutral: Intent()
 //}
 class StandpointVegetarian: Intent()
 class StandpointVegan: Intent()
+class PositiveAnswer : Intent()
+class NegativeAnswer : Intent()
+class Opinion : Intent()
