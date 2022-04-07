@@ -54,7 +54,7 @@ val arguments_meat_options= mutableListOf(
 val arguments_against_meat_options = mutableListOf(
     "Animals are actually sentient and intelligent, so we should care about animal welfare. They feel pain, have memories, family connections and connections to humans too. Animals suffer from meat-eating behavior.",
     "Some people see that pets should be protected, but not animals that are killed for food. There is no difference between pets and other animals such as chickens, cows and pigs.",
-    "It is not sustainable, land and water is needed for creating crops to feed the animals, though that land could be used for living, nature or for creating crops for humans. Raising meat for slaughter is inefficient.",
+    "Meat is not sustainable, land and water is needed for creating crops to feed the animals, though that land could be used for living, nature or for creating crops for humans. Raising meat for slaughter is inefficient.",
     "Livestock contributes a lot to CO2 emissions, eating red meat has a large carbon footprint.",
     "Eating plants can provide us with the essential nutrients, you don’t need to eat meat to survive.",
     "Humans are at the top of the food chain, so you should make a moral decision to help the planet and its animals. You should use your intelligence to make a positive change, towards sustainability.",
@@ -72,3 +72,4 @@ val confirmationOptions = mutableListOf("Okay", "Alright", "Cool", "Great")
 val confirmationRequestOptions = mutableListOf("Do you agree?", "Don’t you agree?", "Don’t you think so?","wouldn't you say so?", "Right?")
 val showUnderstanding = mutableListOf("Ah, alright", "Oh, okay", "Ow", "Ah", "Really?")
 val factIntroduction = mutableListOf("Did you know that", "Actually,","Let me tell you something,")
+val copulative = mutableListOf("therefore", "that is why", "because of that")
