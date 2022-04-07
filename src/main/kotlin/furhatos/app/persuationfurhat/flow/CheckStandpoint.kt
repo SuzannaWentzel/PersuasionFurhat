@@ -1,16 +1,18 @@
 package furhatos.app.persuationfurhat.flow
 
+import furhatos.app.persuationfurhat.nlu.NegativeAnswer
+import furhatos.app.persuationfurhat.nlu.PositiveAnswer
 import furhatos.flow.kotlin.State
 import furhatos.flow.kotlin.furhat
 import furhatos.flow.kotlin.onResponse
 import furhatos.flow.kotlin.state
+import furhatos.gestures.Gestures
 import furhatos.nlu.Intent
 import furhatos.nlu.common.No
 import furhatos.nlu.common.Yes
 import kotlin.random.Random
 
-class PositiveAnswer : Intent()
-class NegativeAnswer : Intent()
+
 var confirmed = false
 
 val askConfirmation: State = state(Interaction) {
@@ -48,6 +50,7 @@ val askConfirmation: State = state(Interaction) {
         }
 
         furhat.say(getRandomShowUnderstanding())
+        furhat.gesture(Gestures.Smile)
         furhat.say(getFactIntroduction())
 
 

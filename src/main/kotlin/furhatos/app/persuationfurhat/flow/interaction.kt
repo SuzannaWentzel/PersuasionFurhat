@@ -9,8 +9,9 @@ import furhatos.gestures.Gestures
 val Start : State = state(Interaction) {
 
     onEntry {
+        dialogLogger.startSession()
         furhat.say("Hello there!")
-        furhat.listen(timeout = 2000)
+        furhat.listen(timeout = 4000)
     }
 
     onNoResponse {

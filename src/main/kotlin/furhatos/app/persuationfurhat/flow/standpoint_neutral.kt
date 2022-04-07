@@ -10,10 +10,10 @@ import kotlin.random.Random
 val standpoint_neutral: State = state(Interaction) {
 
     onEntry {
-        val random = Random.nextInt(0, standpoint_neutral_options.size)
-        furhat.say(standpoint_neutral_options[random])
-        standpoint_neutral_options.removeAt(random)
-        goto(askConfirmation)
+            val random = Random.nextInt(0, standpoint_neutral_options.size)
+            furhat.say(standpoint_neutral_options[random])
+            standpoint_neutral_options.removeAt(random)
+            goto(askConfirmation)
     }
 
 }
