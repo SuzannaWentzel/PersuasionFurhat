@@ -6,7 +6,17 @@ import confirmationRequestOptions
 import factIntroduction
 import arguments_meat_options
 import arguments_against_meat_options
+import arguments_neutral_options
 import furhatos.flow.kotlin.furhat
+import standpoint_against_meat1_options
+import standpoint_against_meat2_options
+import standpoint_against_meat3_options
+import standpoint_against_meat4_options
+import standpoint_meat1_options
+import standpoint_meat2_options
+import standpoint_meat3_options
+import standpoint_meat4_options
+import standpoint_neutral_options
 import kotlin.random.Random
 
 fun getRandomConfirmationQuestion(): String {
@@ -39,4 +49,20 @@ fun getFactAgainstMeat(): String {
     val argument = arguments_against_meat_options[random]
     arguments_against_meat_options.removeAt(random)
     return argument
+}
+
+//    Check if any of the lists with possible options is empty so we can end the conversation
+fun optionsIsEmpty(): Boolean {
+    return arguments_meat_options.isEmpty() or
+            arguments_against_meat_options.isEmpty() or
+            arguments_neutral_options.isEmpty() or
+            standpoint_neutral_options.isEmpty() or
+            standpoint_meat4_options.isEmpty() or
+            standpoint_meat3_options.isEmpty() or
+            standpoint_meat2_options.isEmpty() or
+            standpoint_meat1_options.isEmpty() or
+            standpoint_against_meat1_options.isEmpty() or
+            standpoint_against_meat2_options.isEmpty() or
+            standpoint_against_meat3_options.isEmpty() or
+            standpoint_against_meat4_options.isEmpty()
 }
