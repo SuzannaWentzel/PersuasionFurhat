@@ -62,14 +62,16 @@ val askConfirmation: State = state(Interaction) {
         furhat.gesture(Gestures.Smile)
         furhat.say(getFactIntroduction())
 
-
         if (x == 4) {
 //            Neutral
+//            todo!
         } else if (x > 4) {
             furhat.say(getFactMeat())
         } else {
             furhat.say(getFactAgainstMeat())
         }
+
+        furhat.say(getRandomCopulative())
 
         goto(statechecker)
     }

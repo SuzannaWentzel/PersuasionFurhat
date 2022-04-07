@@ -7,6 +7,7 @@ import factIntroduction
 import arguments_meat_options
 import arguments_against_meat_options
 import arguments_neutral_options
+import copulative
 import furhatos.flow.kotlin.furhat
 import standpoint_against_meat1_options
 import standpoint_against_meat2_options
