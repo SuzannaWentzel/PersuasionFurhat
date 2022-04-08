@@ -9,7 +9,8 @@ import furhatos.nlu.common.Yes
 
 val ending: State = state(Interaction) {
     onEntry {
-        furhat.say("We had a great talk, thanks!")
+        furhat.say("This was a great talk")
+        furhat.say("Thanks!")
         furhat.ask("Did I change your opinion about eating meat in any way?")
     }
 
@@ -46,7 +47,7 @@ val ending2: State = state(Interaction) {
 }
 val ending3: State = state(Interaction) {
     onEntry {
-        furhat.ask("please tell me your original opinion")
+        furhat.ask("Please tell me your original opinion")
     }
     onResponse<Opinion>{
         print(it.text)

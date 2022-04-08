@@ -8,7 +8,6 @@ import arguments_meat_options
 import arguments_against_meat_options
 import arguments_neutral_options
 import copulative
-import furhatos.flow.kotlin.furhat
 import standpoint_against_meat1_options
 import standpoint_against_meat2_options
 import standpoint_against_meat3_options
@@ -21,9 +20,7 @@ import standpoint_neutral_options
 import kotlin.random.Random
 
 fun getRandomConfirmationQuestion(): String {
-    val randomIndex = Random.nextInt(0, confirmationRequestOptions.size)
-    print(randomIndex)
-    return confirmationRequestOptions[randomIndex]
+    return confirmationRequestOptions[Random.nextInt(0, confirmationRequestOptions.size)]
 }
 
 fun getRandomShowUnderstanding(): String {
@@ -34,21 +31,28 @@ fun getRandomConfirmation(): String {
     return confirmationOptions[Random.nextInt(0, confirmationOptions.size)]
 }
 
-fun getFactIntroduction(): String {
+fun getRandomFactIntroduction(): String {
     return factIntroduction[Random.nextInt(0, factIntroduction.size)]
 }
 
-fun getFactMeat(): String {
-    val random = Random.nextInt(0, arguments_meat_options.size)
-    val argument = arguments_meat_options[random]
-    arguments_meat_options.removeAt(random)
+fun getRandomFactMeat(): String {
+    val randomIndex = Random.nextInt(0, arguments_meat_options.size)
+    val argument = arguments_meat_options[randomIndex]
+    arguments_meat_options.removeAt(randomIndex)
     return argument
 }
 
-fun getFactAgainstMeat(): String {
-    val random = Random.nextInt(0, arguments_against_meat_options.size)
-    val argument = arguments_against_meat_options[random]
-    arguments_against_meat_options.removeAt(random)
+fun getRandomFactAgainstMeat(): String {
+    val randomIndex = Random.nextInt(0, arguments_against_meat_options.size)
+    val argument = arguments_against_meat_options[randomIndex]
+    arguments_against_meat_options.removeAt(randomIndex)
+    return argument
+}
+
+fun getRandomFactNeutral(): String {
+    val randomIndex = Random.nextInt(0, arguments_neutral_options.size)
+    val argument = arguments_neutral_options[randomIndex]
+    arguments_neutral_options.removeAt(randomIndex)
     return argument
 }
 
@@ -69,6 +73,5 @@ fun optionsIsEmpty(): Boolean {
 }
 
 fun getRandomCopulative(): String {
-    val random = Random.nextInt(0, copulative.size)
-    return copulative[random]
+    return copulative[Random.nextInt(0, copulative.size)]
 }

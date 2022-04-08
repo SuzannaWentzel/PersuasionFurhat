@@ -64,12 +64,12 @@ val arguments_against_meat_options = mutableListOf(
     "Expansion of livestock production is a key factor in deforestation."
 )
 val arguments_neutral_options= mutableListOf(
-    "Everybody should be able to eat the things that make them happy",
-    "Why should anyone decide what someone should eat?"
+    "Everybody should be able to eat the things that make them happy.",
+    "People should decide for themselves if they want to eat meat or not."
 )
 
 val confirmationOptions = mutableListOf("Okay", "Alright", "Cool", "Great")
 val confirmationRequestOptions = mutableListOf("Do you agree?", "Don’t you agree?", "Don’t you think so?","wouldn't you say so?", "Right?")
-val showUnderstanding = mutableListOf("Ah, alright", "Oh, okay", "Ow", "Ah", "Really?")
+val showUnderstanding = mutableListOf("Ah, alright", "Oh, okay", "Oh", "Ah", "Really?")
 val factIntroduction = mutableListOf("Did you know that", "Actually,","Let me tell you something,")
 val copulative = mutableListOf("therefore", "that is why", "because of that")
