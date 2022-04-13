@@ -9,7 +9,7 @@ import LastQuestion
 
 val askLastQuestion: State = state(Interaction) {
     onEntry {
-        furhat.say(LastQuestion[0])
+        furhat.say(LastQuestion)
         goto(askConfirmation)
     }
 

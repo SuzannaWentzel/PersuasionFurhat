@@ -1,5 +1,6 @@
 package furhatos.app.persuationfurhat.flow
 
+import LastQuestion
 import furhatos.app.persuationfurhat.nlu.NegativeAnswer
 import furhatos.app.persuationfurhat.nlu.PositiveAnswer
 import furhatos.flow.kotlin.State
@@ -9,15 +10,23 @@ import furhatos.flow.kotlin.state
 import furhatos.gestures.Gesture
 import furhatos.gestures.Gestures
 import furhatos.nlu.Intent
+import furhatos.nlu.SimpleIntent
 import furhatos.nlu.common.No
 import furhatos.nlu.common.Yes
+import kotlin.math.log
 import kotlin.random.Random
+import kotlin.reflect.typeOf
 
 
 var confirmed = false
 
 val askConfirmation: State = state(dialogState) {
+    var RepeatQuestion = SimpleIntent("empty" )
+
     onEntry {
+        var splittedQuestion = LastQuestion.split(" ").toMutableList()
+        print(splittedQuestion)
+        RepeatQuestion = SimpleIntent(splittedQuestion)
         furhat.gesture(Gestures.Blink)
         furhat.ask(getRandomConfirmationQuestion())
     }
@@ -81,7 +90,9 @@ val askConfirmation: State = state(dialogState) {
 
         goto(statechecker)
     }
-    onResponse<Question> {
-        
+
+    onResponse(RepeatQuestion) {
+        furhat.say("Yes")
+        reentry()
     }
 }
