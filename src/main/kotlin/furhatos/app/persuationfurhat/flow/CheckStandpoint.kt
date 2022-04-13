@@ -6,6 +6,7 @@ import furhatos.flow.kotlin.State
 import furhatos.flow.kotlin.furhat
 import furhatos.flow.kotlin.onResponse
 import furhatos.flow.kotlin.state
+import furhatos.gestures.Gesture
 import furhatos.gestures.Gestures
 import furhatos.nlu.Intent
 import furhatos.nlu.common.No
@@ -17,6 +18,7 @@ var confirmed = false
 
 val askConfirmation: State = state(Interaction) {
     onEntry {
+        furhat.gesture(Gestures.Blink)
         furhat.ask(getRandomConfirmationQuestion())
     }
 
@@ -32,9 +34,13 @@ val askConfirmation: State = state(Interaction) {
             x += random
         }
 
+        furhat.gesture(Gestures.Smile(duration=3.0))
         furhat.say(getRandomConfirmation())
 
         if (optionsIsEmpty()) {
+            goto(ending)
+        }
+        else if (x>8 || x<0){
             goto(ending)
         }
 
@@ -52,15 +58,16 @@ val askConfirmation: State = state(Interaction) {
             val random = Random.nextInt(-2, 2)
             x += random
         }
-
+        furhat.gesture(random(Gestures.Oh(duration = 2.0), Gestures.Shake(duration = 2.0)))
         furhat.say(getRandomShowUnderstanding())
 
         if (optionsIsEmpty()) {
             goto(ending)
         }
 
-        furhat.gesture(Gestures.Smile)
+        furhat.gesture(Gestures.Smile(duration = 2.0))
         furhat.say(getRandomFactIntroduction())
+        furhat.gesture(Gestures.GazeAway(duration = 2.0))
 
         if (x == 4) {
             furhat.say(getRandomFactNeutral())
@@ -69,7 +76,7 @@ val askConfirmation: State = state(Interaction) {
         } else {
             furhat.say(getRandomFactAgainstMeat())
         }
-
+        furhat.gesture(Gestures.Thoughtful(duration = 2.0))
         furhat.say(getRandomCopulative())
 
         goto(statechecker)

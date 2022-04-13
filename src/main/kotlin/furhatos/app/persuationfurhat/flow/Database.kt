@@ -20,7 +20,7 @@ val standpoint_against_meat1_options = mutableListOf(
 
 val standpoint_meat1_options = mutableListOf(
     "Eating meat is a tradition, especially in holidays. Like turkey with thanksgiving, and rabbit for Christmas. ",
-    "Personally, i like to eat meat, but other people can do what they want."
+    "Personally, i also like to eat meat, but other people can do what they want."
 )
 val standpoint_meat2_options = mutableListOf(
     "If I could eat, I would definitely eat meat, it tastes great",
