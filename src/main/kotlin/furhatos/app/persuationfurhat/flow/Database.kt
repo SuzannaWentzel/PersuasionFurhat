@@ -73,3 +73,6 @@ val confirmationRequestOptions = mutableListOf("Do you agree?", "Don’t you agr
 val showUnderstanding = mutableListOf("Ah, alright", "Oh, okay", "Oh", "Ah", "Really?")
 val factIntroduction = mutableListOf("Did you know that", "Actually,","Let me tell you something,")
 val copulative = mutableListOf("therefore", "that is why", "because of that")
+val LastQuestion = mutableListOf(
+    "This should be overwritten"
+)

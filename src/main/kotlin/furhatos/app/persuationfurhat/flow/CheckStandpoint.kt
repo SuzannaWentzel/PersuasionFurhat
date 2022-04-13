@@ -16,7 +16,7 @@ import kotlin.random.Random
 
 var confirmed = false
 
-val askConfirmation: State = state(Interaction) {
+val askConfirmation: State = state(dialogState) {
     onEntry {
         furhat.gesture(Gestures.Blink)
         furhat.ask(getRandomConfirmationQuestion())
@@ -80,5 +80,8 @@ val askConfirmation: State = state(Interaction) {
         furhat.say(getRandomCopulative())
 
         goto(statechecker)
+    }
+    onResponse<Question> {
+        
     }
 }

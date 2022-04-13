@@ -2,6 +2,7 @@ package furhatos.app.persuationfurhat.nlu
 
 import furhatos.nlu.Intent
 import furhatos.util.Language
+import LastQuestion
 
 //class Greetings: Intent() {
 //    override fun getExamples(lang: Language): List<String> {
@@ -23,3 +24,4 @@ class StandpointVegan: Intent()
 class PositiveAnswer : Intent()
 class NegativeAnswer : Intent()
 class Opinion : Intent()
+class Question : Intent()

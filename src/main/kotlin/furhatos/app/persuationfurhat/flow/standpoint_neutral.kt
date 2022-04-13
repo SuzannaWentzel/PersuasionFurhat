@@ -7,7 +7,7 @@ import furhatos.gestures.Gestures
 import standpoint_neutral_options
 import kotlin.random.Random
 
-val standpoint_neutral: State = state(Interaction) {
+val standpoint_neutral: State = state(dialogState) {
 
     onEntry {
             val random = Random.nextInt(0, standpoint_neutral_options.size)

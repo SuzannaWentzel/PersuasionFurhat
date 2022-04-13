@@ -43,3 +43,30 @@ val Interaction: State = state {
     }
 
 }
+val dialogState = state(parent = null) {
+    var noinput = 0
+    var nomatch = 0
+
+    onResponse {
+        nomatch++
+        if (nomatch > 1)
+            furhat.say("Sorry, I still didn't understand that one")
+        else
+            furhat.say("Sorry, I didn't understand that one")
+        goto(askLastQuestion)
+    }
+
+    onNoResponse {
+        noinput++
+        if (noinput > 1)
+            furhat.say("Sorry, I still didn't hear you, can you try to speak a bit louder?")
+        else
+            furhat.say("Sorry, I didn't hear you")
+        goto(askLastQuestion)
+    }
+
+    onResponseFailed {
+        furhat.say("Sorry, my speech recognizer is not working")
+        terminate()
+    }
+}
