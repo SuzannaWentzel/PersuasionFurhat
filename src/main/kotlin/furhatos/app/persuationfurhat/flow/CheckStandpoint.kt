@@ -22,14 +22,13 @@ var confirmed = false
 
 val askConfirmation: State = state(dialogState) {
     var RepeatQuestion = SimpleIntent("empty" )
-
+    val splittedQuestion = LastQuestion.split(" ").toMutableList()
+    RepeatQuestion = SimpleIntent(splittedQuestion)
     onEntry {
-        var splittedQuestion = LastQuestion.split(" ").toMutableList()
-        print(splittedQuestion)
-        RepeatQuestion = SimpleIntent(splittedQuestion)
         furhat.gesture(Gestures.Blink)
         furhat.ask(getRandomConfirmationQuestion())
     }
+
 
 //    User agreed with the more extreme standpoint, so try to make it even more extreme
     onResponse<PositiveAnswer> {
@@ -92,7 +91,7 @@ val askConfirmation: State = state(dialogState) {
     }
 
     onResponse(RepeatQuestion) {
-        furhat.say("Yes")
+        furhat.say(random("Yes", "Exactly"))
         reentry()
     }
 }
