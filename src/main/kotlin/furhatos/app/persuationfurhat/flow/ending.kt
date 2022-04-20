@@ -37,7 +37,7 @@ val ending: State = state(Interaction) {
 }
 val ending2: State = state(Interaction) {
     onEntry {
-        furhat.ask("Please tell me how your opinion has changed")
+        furhat.ask("Please tell me how your opinion has changed?")
     }
     onResponse<Opinion>{
         print(it.text)
@@ -47,7 +47,7 @@ val ending2: State = state(Interaction) {
 }
 val ending3: State = state(Interaction) {
     onEntry {
-        furhat.ask("Please tell me your original opinion")
+        furhat.ask("Please tell me your original opinion?")
     }
     onResponse<Opinion>{
         print(it.text)

@@ -42,7 +42,8 @@ val standpoint_meat4_options = mutableListOf(
 )
 val standpoint_neutral_options = mutableListOf(
     "I don’t care whether people eat meat.",
-    "People should choose for themselves whether they want to eat meat or not."
+    "People should choose for themselves whether they want to eat meat or not.",
+    "I couldn't care less what other people eat"
 )
 val arguments_meat_options= mutableListOf(
     "Humans have always eaten meat, we shouldn't stop now" ,
@@ -61,7 +62,7 @@ val arguments_against_meat_options = mutableListOf(
     "Eating plants can provide us with the essential nutrients, you don’t need to eat meat to survive.",
     "Humans are at the top of the food chain, so you should make a moral decision to help the planet and its animals. You should use your intelligence to make a positive change, towards sustainability.",
     "The food industry treats animals as machines, where they don’t have a good life and are all crammed up. Animal cruelty should be prevented.",
-    "The livestock sector is “one of the top two or three most significant contributors to the most serious environmental problems, at every scale from local to global”.",
+    "The livestock sector is “one of the top two or three most significant contributors to the most serious environmental problems, at every scale from local to global.",
     "The extensive grazing of livestock occupies and degrades vast areas of land. In fact, the livestock sector occupies 26% of the ice-free surface of the earth.",
     "Expansion of livestock production is a key factor in deforestation."
 )
@@ -74,5 +75,5 @@ val confirmationOptions = mutableListOf("Okay", "Alright", "Cool", "Great")
 val confirmationRequestOptions = mutableListOf("Do you agree?", "Don’t you agree?", "Don’t you think so?","wouldn't you say so?", "Right?")
 val showUnderstanding = mutableListOf("Ah, alright", "Oh, okay", "Oh", "Ah", "Really?")
 val factIntroduction = mutableListOf("Did you know that", "Actually,","Let me tell you something,")
-val copulative = mutableListOf("therefore", "that is why", "because of that")
+val copulative = mutableListOf("Therefore", "That is why", "Because of that")
 var LastQuestion = "This should be overwritten"
