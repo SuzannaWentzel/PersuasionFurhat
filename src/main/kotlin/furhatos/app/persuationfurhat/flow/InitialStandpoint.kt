@@ -16,7 +16,7 @@ class standpoint : EnumEntity()
 
 var x = 0
 
-val InitialStandpointV2: State = state(Interaction) {
+val InitialStandpointV2: State = state(dialogState) {
 
     onEntry {
         furhat.ask("I was wondering, what do you think about eating meat?")
