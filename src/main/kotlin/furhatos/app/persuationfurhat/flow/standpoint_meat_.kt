@@ -16,6 +16,7 @@ val standpoint_meat1: State = state(dialogState) {
     onEntry {
             val random = Random.nextInt(0, standpoint_meat1_options.size)
             furhat.gesture(Gestures.Blink)
+            furhat.gesture(Gestures.Blink)
             furhat.say(standpoint_meat1_options[random])
             LastQuestion = standpoint_meat1_options[random]
             standpoint_meat1_options.removeAt(random)
