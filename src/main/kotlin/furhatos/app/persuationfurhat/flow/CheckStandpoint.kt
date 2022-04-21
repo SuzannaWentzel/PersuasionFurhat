@@ -89,9 +89,9 @@ val askConfirmation: State = state(dialogState) {
 
         goto(statechecker)
     }
-
     onResponse(RepeatQuestion) {
         furhat.say(random("Yes", "Exactly"))
         reentry()
     }
+
 }
